@@ -1,0 +1,8 @@
+июн. 11, 2023 3:41:09 PM App simpleCalc
+INFO: User insert first number: 26.0
+июн. 11, 2023 3:41:13 PM App simpleCalc
+INFO: User CHOOSE ACTION: *
+июн. 11, 2023 3:41:20 PM App simpleCalc
+INFO: User insert second number: 5.0
+июн. 11, 2023 3:41:20 PM App simpleCalc
+INFO: Wait for the calculation: Pi pa po pu result-> 130.0

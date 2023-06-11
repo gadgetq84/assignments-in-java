@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 import java.util.Scanner;
 
 public class App {
@@ -9,12 +13,12 @@ public class App {
         // getSimpleDig();
 
         // Метод простой каркулятор
-        // simpleCalc();
+         simpleCalc();
 
         // метод нахождения решения уравнения
-        solutionOfEquation("?4+?5=89");
-        solutionOfEquation("2?+?5=69");
-        solutionOfEquation("2?+?5=79");
+        // solutionOfEquation("?4+?5=89");
+        // solutionOfEquation("2?+?5=69");
+        // solutionOfEquation("2?+?5=79");
 
     }
 
@@ -46,30 +50,45 @@ public class App {
     }
 
     // Метод простой каркулятор
-    private static void simpleCalc() {
+    private static void simpleCalc() throws SecurityException, IOException {
+        Logger logger = Logger.getLogger(App.class.getName());
+        FileHandler info = new FileHandler("log.txt");
+        info.setEncoding("UTF-8");
+        logger.addHandler(info);
+        SimpleFormatter sFormat = new SimpleFormatter();
+        info.setFormatter(sFormat);
+
         Scanner Scanner = new Scanner(System.in);
         System.out.printf("Введите первое число:");
         float dig1 = Float.parseFloat(Scanner.nextLine());
+         logger.info("User insert first number: " + Float.toString(dig1));
         System.out.printf("Введите действие / * + - :");
         String action = Scanner.nextLine();
+        logger.info("User CHOOSE ACTION: " + action);
         System.out.printf("Введите второе число:");
         float dig2 = Float.parseFloat(Scanner.nextLine());
+         logger.info("User insert second number: " + Float.toString(dig2));
 
         switch (action) {
             case "+":
                 System.out.printf(" %s + %s = %s!\n", dig1, dig2, dig1 + dig2);
+                logger.info("Wait for the calculation: Pi pa po pu result-> " + Float.toString(dig1 + dig2));
                 break;
             case "-":
                 System.out.printf(" %s - %s = %s!\n", dig1, dig2, dig1 - dig2);
+                logger.info("Wait for the calculation: Pi pa po pu result-> " + Float.toString(dig1 - dig2));
                 break;
             case "*":
                 System.out.printf(" %s * %s = %s!\n", dig1, dig2, dig1 * dig2);
+                logger.info("Wait for the calculation: Pi pa po pu result-> " + Float.toString(dig1 * dig2));
                 break;
             case "/":
                 if (dig2 != 0) {
                     System.out.printf(" %s / %s = %s!\n", dig1, dig2, dig1 / dig2);
+                    logger.info("Wait for the calculation: Pi pa po pu result-> " + Float.toString(dig1 / dig2));
                 } else {
                     System.out.printf(" %s / %s = %s!\n", dig1, dig2, "Низя так!!!");
+                    logger.info("Fatal error!!! attempt to divide by zero. Destroy everyone." );
                 }
                 break;
 

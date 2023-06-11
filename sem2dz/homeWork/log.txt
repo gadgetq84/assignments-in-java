@@ -1,0 +1,30 @@
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 6 and 12 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 4 and 12 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 1 and 12 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 12 and 15.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 10 and 15 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 4 and 6 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 1 and 6 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 6 and 12.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 10 and 12 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Changing cells 1 and 4 in places.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 4 and 6.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 6 and 10.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 1 and 4.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 4 and 6.
+июн. 11, 2023 12:30:44 PM bubblelog bubbleSort
+INFO: Skipping cells 1 and 4.

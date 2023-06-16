@@ -1,27 +1,33 @@
 public class list {
+    static Node head;
+    static Node tail;
 
-    public static Node push(Node head, int key) {
+    public static Node push(int value) {
         Node node = new Node();
-        node.data = key;
-        node.prev = null;
-        node.next = head;
-
+        node.data = value;
         // изменить `prev` существующего головного узла, чтобы он указывал на новый узел
-        if (head != null) {
-            head.prev = node;
+        if (head != null) {;
+            node.prev = tail;
+            tail.next = node;
+            tail = node;
+
+        } else {
+            head = node;
+            tail = node;
         }
 
         // обновить указатель заголовка и вернуться
-        head = node;
+        // head = node;
         return head;
     }
 
     // вывод узылов двусвязного списка
-    public static void printDDL(String msg, Node head) {
+    public static void printDDL(String msg) {
+        Node curr = head;
         System.out.print(msg);
-        while (head != null) {
-            System.out.print(head.data + " -> ");
-            head = head.next;
+        while (curr != null) {
+            System.out.print(curr.data + " -> ");
+            curr = curr.next;
         }
 
         System.out.println("null");
@@ -32,31 +38,33 @@ public class list {
         Node prev = node.prev;
         node.prev = node.next;
         node.next = prev;
+
     }
 
     // метод для реверсирования двусвязного списка
-    public static Node reverseDDL(Node head) {
-        Node prev = null;
+    public static Node reverseDDL() {
+        // Node prev = null;
         Node curr = head;
-
+       // System.out.println(head.next.data);
         // обход списка
         while (curr != null) {
             // поменять местами указатели `next` и `prev` для текущего узла
-            swap(curr);
+            Node next = curr.next;
+            Node prev = curr.prev;
 
-            // обновить предыдущий узел перед переходом к следующему узлу
-            prev = curr;
+            curr.next = prev;
+            curr.prev = next;
 
-            // перейти к следующему узлу в двусвязном списке (перейти с помощью
-            // указатель `prev`, так как указатели `next` и `prev` поменялись местами)
-            curr = curr.prev;
+            // prev = curr.prev;
+
+            if (prev == null) {
+                tail = curr;
+            }
+            if (next == null) {
+                head = curr;
+            }
+            curr = next;
         }
-
-        // обновить указатель на последний узел
-        if (prev != null) {
-            head = prev;
-        }
-
         return head;
     }
 }

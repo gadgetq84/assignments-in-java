@@ -5,16 +5,17 @@ public class App {
                 // System.out.println("Отсортированный массив ");
                 // pyr.printArray(array);
 
-                int[] keys = { 16, 12, 43, 7, 1, 9, 20, 13, 11};
+                // Необходимо реализовать метод разворота связного списка (двухсвязного или
+                // односвязного на выбор).
+                int[] keys = { 16, 12, 43, 7, 1, 9, 20, 13, 11 };
 
-                Node head = null;
                 for (int key : keys) {
-                        head = list.push(head, key);
+                        list.push(key);
                 }
 
-                list.printDDL("Original list: ", head);
-                head = list.reverseDDL(head);
-                list.printDDL("Reversed list: ", head);
+                list.printDDL("Original list: ");
+                list.reverseDDL();
+                list.printDDL("Reversed list: ");
 
         }
 }
